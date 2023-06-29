@@ -637,7 +637,7 @@ function showWords() {
           setTimeout(() => {
             // Встановлює фокус на інпут
             setsAocusOnInputs();
-          }, 400);
+          }, 1000);
         }
       });
     }
