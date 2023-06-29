@@ -1,4 +1,102 @@
 const words = {
+  greetings: [
+    {
+      src: 'greetings/seeyoulater',
+      wordAi: 'See you later!',
+      transcription: '',
+      wordUa: 'Побачимося пізніше!',
+    },
+    {
+      src: 'greetings/bye',
+      wordAi: 'Bye!',
+      transcription: '',
+      wordUa: 'Бувай!',
+    },
+    {
+      src: 'greetings/goodbye',
+      wordAi: 'Goodbye!',
+      transcription: '',
+      wordUa: 'До побачення!',
+    },
+    {
+      src: 'greetings/nicetomeetyoutoo',
+      wordAi: 'Nice to meet you, too!',
+      transcription: '',
+      wordUa: 'Також приємно познайомитись!',
+    },
+    {
+      src: 'greetings/nicetomeetyou',
+      wordAi: 'Nice to meet you!',
+      transcription: '',
+      wordUa: 'Приємно познайомитись!',
+    },
+    {
+      src: 'greetings/thisismyfriend',
+      wordAi: 'This is my friend',
+      transcription: '',
+      wordUa: 'Це мій друг ...',
+    },
+    {
+      src: 'greetings/mynameisivan',
+      wordAi: 'My name is Ivan',
+      transcription: '',
+      wordUa: "Мене звати Іван / Моє ім'я Іван",
+    },
+    {
+      src: 'greetings/whatshername',
+      wordAi: "What's her name?",
+      transcription: '',
+      wordUa: 'Як її звати?',
+    },
+    {
+      src: 'greetings/whatshisname',
+      wordAi: "What's his name?",
+      transcription: '',
+      wordUa: 'Як його звати?',
+    },
+    {
+      src: 'greetings/whatsyourname',
+      wordAi: "What's your name?",
+      transcription: '',
+      wordUa: 'Як вас звати?',
+    },
+    {
+      src: 'greetings/verywellthankyou',
+      wordAi: 'Very well, thank you.',
+      transcription: '',
+      wordUa: 'Дуже добре, дякую.',
+    },
+    {
+      src: 'greetings/finethanksandyou',
+      wordAi: 'Fine, thanks. And you?',
+      transcription: '',
+      wordUa: 'Все гаразд, дякую!',
+    },
+    {
+      src: 'greetings/imokthankyou',
+      wordAi: "I'm OK, thank you!",
+      transcription: '',
+      wordUa: 'Все гаразд, дякую!',
+    },
+    {
+      src: 'greetings/howareyou',
+      wordAi: 'How are you?',
+      transcription: '',
+      wordUa: 'Як справи?',
+    },
+    {
+      src: 'greetings/hi',
+      wordAi: 'Hi!',
+      transcription: '|haɪ|',
+      wordUa: 'Привіт!',
+    },
+    {
+      src: 'greetings/hello',
+      wordAi: 'Hello!',
+      transcription: '|həˈləʊ|',
+      wordUa: 'Привіт!',
+    },
+  ],
   numbers: [
     {
       src: 'numbers/one',
@@ -422,6 +520,85 @@ const words = {
     },
   ],
   words_1: [
+    {
+      src: 'words_1/married',
+      wordAi: 'married',
+      transcription: '|ˈmærɪd|',
+      wordUa: 'одружений, заміжня',
+    },
+    {
+      src: 'words_1/colour',
+      wordAi: 'colour',
+      transcription: '|ˈkʌlə|',
+      wordUa: 'колір',
+    },
+    {
+      src: 'words_1/violin',
+      wordAi: 'violin',
+      transcription: '|vaɪəˈlɪn|',
+      wordUa: 'скрипка',
+    },
+    {
+      src: 'words_1/mobilephone',
+      wordAi: 'mobile phone',
+      transcription: '| ˈməʊbaɪl | |fəʊn|',
+      wordUa: 'мобільний телефон',
+    },
+    {
+      src: 'words_1/student',
+      wordAi: 'student',
+      transcription: '| ˈstjuːd(ə)nt |',
+      wordUa: 'студент, студентка',
+    },
+    {
+      src: 'words_1/kid',
+      wordAi: 'kid',
+      transcription: '| kɪd |',
+      wordUa: 'дитина',
+    },
+    {
+      src: 'words_1/friend',
+      wordAi: 'friend',
+      transcription: '| frend |',
+      wordUa: 'друг, подруга',
+    },
+    {
+      src: 'words_1/dog',
+      wordAi: 'dog',
+      transcription: '| dɒɡ |',
+      wordUa: 'собака',
+    },
+    {
+      src: 'words_1/cat',
+      wordAi: 'cat',
+      transcription: '| kæt |',
+      wordUa: 'кіт, кішка',
+    },
+    {
+      src: 'words_1/woman',
+      wordAi: 'woman',
+      transcription: '| ˈwʊmən |',
+      wordUa: 'жінка',
+    },
+    {
+      src: 'words_1/man',
+      wordAi: 'man',
+      transcription: '| mæn |',
+      wordUa: 'чоловік',
+    },
+
+    {
+      src: 'words_1/girl',
+      wordAi: 'girl',
+      transcription: '| ɡɜːl |',
+      wordUa: 'дівчинка',
+    },
+    {
+      src: 'words_1/boy',
+      wordAi: 'boy',
+      transcription: '| ˌbɔɪ |',
+      wordUa: 'хлопчик, хлопець',
+    },
     {
       src: 'words_1/child',
       wordAi: 'child',
