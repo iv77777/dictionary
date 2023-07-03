@@ -757,14 +757,7 @@ function openPopupMenu() {
 // =============================================================
 
 for (let key in words) {
-  // ключі
-  // console.log(key);
-  // значення ключів
   renderPopupMenu(key, words[key].length);
-  // console.log(key);
-  // renderWords(words.countries_And_Nationality);
-  // renderWords(words[key]);
-  // console.log(words[key]);
 }
 
 function getCheckedCheckBoxes() {
@@ -778,7 +771,7 @@ function getCheckedCheckBoxes() {
   return checkedValues; // для использования в нужном месте
 }
 
-function showWords() {
+function showWordsPopupSelect() {
   const html = document.querySelector('html');
 
   if (html.classList.contains('open-popup-menu')) {
@@ -789,36 +782,40 @@ function showWords() {
     const inputsChecked = getCheckedCheckBoxes();
     if (inputsChecked.length > 0) {
       inputsChecked.forEach((element) => {
-        renderWords(words[element]);
-      });
-      //Показє слайдер з нулевого індекса
-      swiper.activeIndex = 0;
-      // обновляє слайдер
-      swiper.update();
-
-      // При зміні значення інпута
-      onInput();
-      // Встановлює фокус на інпут
-      setsAocusOnInputs();
-
-      // Показує скриває текст підсказку
-      showsHiddenText();
-
-      setTimeout(() => {
-        renderValueCounter();
-      }, 100);
-
-      // при кожній зміні слайдера Якщо відкритий інпут для ввода то ставем в ньго курссор
-      swiper.on('slideChange', function () {
-        if (document.querySelector('html').classList.contains('popup-open')) {
-          setTimeout(() => {
-            // Встановлює фокус на інпут
-            setsAocusOnInputs();
-          }, 200);
-        }
+        showWords(words[element]);
       });
     }
   }
+}
+
+function showWords(wordsElement, index = 0) {
+  renderWords(wordsElement, index);
+  //Показє слайдер з нулевого індекса
+  swiper.activeIndex = index;
+  // обновляє слайдер
+  swiper.update();
+
+  // При зміні значення інпута
+  onInput();
+  // Встановлює фокус на інпут
+  setsAocusOnInputs();
+
+  // Показує скриває текст підсказку
+  showsHiddenText();
+
+  setTimeout(() => {
+    renderValueCounter();
+  }, 100);
+
+  // при кожній зміні слайдера Якщо відкритий інпут для ввода то ставем в ньго курссор
+  swiper.on('slideChange', function () {
+    if (document.querySelector('html').classList.contains('popup-open')) {
+      setTimeout(() => {
+        // Встановлює фокус на інпут
+        setsAocusOnInputs();
+      }, 200);
+    }
+  });
 }
 // =============================================================
 
@@ -826,10 +823,6 @@ function showWords() {
 function renderWords(words) {
   const swiperContainer = document.querySelector('.swiper-container_js');
   words.forEach((element) => {
-    let number = '';
-    if (Number(element.wordUa)) {
-      number = element.wordUa;
-    }
     const card = `
     <swiper-slide>
       <div class="card">
@@ -885,8 +878,6 @@ function renderWords(words) {
     swiperContainer.insertAdjacentHTML('beforeend', card);
   });
 }
-// Рендерить слова з переданого масиву на сторінку HTML
-// renderWords(words);
 
 // Запускає звук переданого слова
 function soundClick(word) {

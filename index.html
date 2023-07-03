@@ -6,14 +6,39 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dictionary</title>
+  <link rel="shortcut icon" href="favicon.png" type="image/png">
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/swiper/swiper-bundle.css">
-  <link rel="stylesheet" href="./css/swiper/myStyle.css?_v=10231123030814">
-  <link rel="stylesheet" href="./css/style.css?_v=10231123030814">
+  <link rel="stylesheet" href="./search/search.css?_v=10231123030815">
+  <link rel="stylesheet" href="./css/swiper/myStyle.css?_v=10231123030815">
+  <link rel="stylesheet" href="./css/style.css?_v=10231123030815">
 </head>
 
 <body class="unselectable">
-  <div class="icon-menu icon-menu_js" onclick="showWords()">
+
+  <div class="search">
+    <button class="search__btn">
+      <svg viewBox="0 0 24 24" width="24px" height="24px" fill="yellow">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M13.753 13.753a1.25 1.25 0 0 1 1.768 0l6 6a1.25 1.25 0 1 1-1.768 1.768l-6-6a1.25 1.25 0 0 1 0-1.768Z">
+        </path>
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M9.75 4.25a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11Zm-8 5.5a8 8 0 1 1 16 0 8 8 0 0 1-16 0Z"></path>
+      </svg>
+    </button>
+    <div class="search__block">
+      <input class="search__input" id="search__input" value="" autocomplete="off" placeholder="Enter the word"
+        type="text">
+      <button class="search__btn-search">
+        <svg width="24" height="24" viewBox="0 0 33 33" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 30.2843L30.2843 2" stroke="#FFF" stroke-width="4" stroke-linecap="round" />
+          <path d="M2 1.99997L30.2843 30.2842" stroke="#FFF" stroke-width="4" stroke-linecap="round" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="icon-menu icon-menu_js" onclick="showWordsPopupSelect()">
     <div class="icon-menu_line icon-menu_line-1"></div>
     <div class="icon-menu_line icon-menu_line-2"></div>
     <div class="icon-menu_line icon-menu_line-3"></div>
@@ -36,13 +61,18 @@
   </div>
 
   <div class="popup-menu">
-    <form class="popup-menu__content popup-menu__content_js"></form>
+    <div class="popup-menu__content popup-menu__content_js"></div>
+  </div>
+  <div class="popup-words">
+    <div class="counter-worbs counter-worbs_js">0</div>
+    <ul class="popup-words__content popup-words__content_js"></ul>
   </div>
 
 
   <script src="./js/swiper/swiper-bundle.min.js"></script>
-  <script src="./js/swiper/swiperInit.js"></script>
-  <script src="./js/script.js?_v=10231123030814"></script>
+  <script src="./js/swiper/swiperInit.js?_v=10231123030815"></script>
+  <script src="./js/script.js?_v=10231123030815"></script>
+  <script src="./search/search.js?_v=10231123030815"></script>
 </body>
 
 </html>

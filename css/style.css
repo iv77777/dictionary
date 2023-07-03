@@ -17,6 +17,9 @@ body {
   text-align: center;
 }
 
+.hide {
+  display: none;
+}
 .icon-menu {
   position: fixed;
   top: 20px;
@@ -25,6 +28,9 @@ body {
   height: 30px;
   cursor: pointer;
   z-index: 3;
+}
+.open-popup-words .icon-menu {
+  z-index: 0;
 }
 .icon-menu_line {
   position: absolute;
@@ -194,7 +200,8 @@ body {
   background-color: green;
 }
 
-.popup-menu {
+.popup-menu,
+.popup-words {
   position: fixed;
   bottom: -100%;
   left: 0;
@@ -208,11 +215,32 @@ body {
   text-align: left;
   font-size: 18px;
 }
+.popup-menu::after,
+.popup-words::after {
+  content: '';
+  width: 100%;
+  height: 60px;
+  display: none;
+  background-color: #afd19a;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
 .open-popup-menu .popup-menu {
   bottom: 0;
 }
+.open-popup-words .popup-words {
+  bottom: 0;
+}
+.open-popup-menu .popup-menu::after {
+  display: block;
+}
+.open-popup-words .popup-words::after {
+  display: block;
+}
 
-.popup-menu__content {
+.popup-menu__content,
+.popup-words__content {
   position: relative;
   border-radius: 10px;
   background-color: #fff;
@@ -233,4 +261,12 @@ body {
 }
 .popup__input {
   width: 100%;
+}
+
+.popup-words__content-li {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #d8ddd8;
+  margin-bottom: 5px;
+  cursor: pointer;
 }
