@@ -1,5 +1,6 @@
 swiper-slide {
   padding-bottom: 30px;
+  min-width: 265px;
 }
 .popup-open .swiper-button-navigation {
   top: auto;
