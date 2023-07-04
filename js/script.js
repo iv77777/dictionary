@@ -268,7 +268,7 @@ const words = {
       wordUa: '100',
     },
   ],
-  countries_And_Nationality: [
+  countries_and_nationality: [
     {
       src: 'countries_And_Nationality/china',
       wordAi: 'China',
