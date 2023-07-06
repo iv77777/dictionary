@@ -5,6 +5,11 @@ const swiper = new Swiper('.swiper', {
   // зацикльть покругу
   // loop: true,
 
+  // Включає клавіатуру для управління
+  keyboard: {
+    enabled: true,
+  },
+
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',

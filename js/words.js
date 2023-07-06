@@ -1,32 +1,32 @@
-const words = {
+let words = {
   greetings: [
     {
       src: 'greetings/seeyoulater',
-      wordAi: 'See you later!',
+      wordAi: 'See you later',
       transcription: '',
       wordUa: 'Побачимося пізніше!',
     },
     {
       src: 'greetings/bye',
-      wordAi: 'Bye!',
+      wordAi: 'Bye',
       transcription: '',
       wordUa: 'Бувай!',
     },
     {
       src: 'greetings/goodbye',
-      wordAi: 'Goodbye!',
+      wordAi: 'Goodbye',
       transcription: '',
       wordUa: 'До побачення!',
     },
     {
       src: 'greetings/nicetomeetyoutoo',
-      wordAi: 'Nice to meet you, too!',
+      wordAi: 'Nice to meet you, too',
       transcription: '',
       wordUa: 'Також приємно познайомитись!',
     },
     {
       src: 'greetings/nicetomeetyou',
-      wordAi: 'Nice to meet you!',
+      wordAi: 'Nice to meet you',
       transcription: '',
       wordUa: 'Приємно познайомитись!',
     },
@@ -62,7 +62,7 @@ const words = {
     },
     {
       src: 'greetings/verywellthankyou',
-      wordAi: 'Very well, thank you.',
+      wordAi: 'Very well, thank you',
       transcription: '',
       wordUa: 'Дуже добре, дякую.',
     },
@@ -74,7 +74,7 @@ const words = {
     },
     {
       src: 'greetings/imokthankyou',
-      wordAi: "I'm OK, thank you!",
+      wordAi: "I'm OK, thank you",
       transcription: '',
       wordUa: 'Все гаразд, дякую!',
     },
@@ -86,13 +86,13 @@ const words = {
     },
     {
       src: 'greetings/hi',
-      wordAi: 'Hi!',
+      wordAi: 'Hi',
       transcription: '|haɪ|',
       wordUa: 'Привіт!',
     },
     {
       src: 'greetings/hello',
-      wordAi: 'Hello!',
+      wordAi: 'Hello',
       transcription: '|həˈləʊ|',
       wordUa: 'Привіт!',
     },
@@ -809,7 +809,7 @@ const words = {
     },
     {
       src: 'words_3/answeraquestion',
-      wordAi: 'Answer a question!',
+      wordAi: 'Answer a question',
       transcription: '',
       wordUa: 'Дай відповідь!',
     },
@@ -839,7 +839,7 @@ const words = {
     },
     {
       src: 'words_3/workwithapartner',
-      wordAi: 'Work with a partner!',
+      wordAi: 'Work with a partner',
       transcription: '',
       wordUa: 'Працюй з партнером!',
     },

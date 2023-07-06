@@ -168,7 +168,7 @@ body {
   cursor: pointer;
 }
 .showText .popup__text {
-  color: #81a66a36;
+  color: #81a66ab8;
 }
 .popup__text span {
   display: block;
@@ -188,7 +188,7 @@ body {
   text-align: center;
   background: #afd19a4d;
   border-radius: 5px;
-  border: transparent 1px solid;
+  border: #63ae6942 1px solid;
 }
 .popup__input:focus {
   border: #63ae69 1px solid;
@@ -276,6 +276,7 @@ body {
   position: absolute;
   top: 0;
   right: 0;
+  color: #cfcccc;
 }
 
 .popup-words_top {
@@ -285,8 +286,13 @@ body {
 
 .popup-words_language-btn {
   padding: 5px;
-  background-color: #ffff00ad;
+  background-color: #eaeb37;
   border-radius: 5px;
   margin-bottom: 3px;
   color: #63ae69;
+  cursor: pointer;
+}
+
+.popup-words_language-btn:active {
+  background-color: #eaeb373d;
 }

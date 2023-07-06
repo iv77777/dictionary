@@ -8,6 +8,7 @@ if (popupWordsLanguageBtn) {
   popupWordsLanguageBtn.addEventListener('click', () => {
     togglePopupLanguage(tagHtml);
     showAllWordsInPopupWordsContent(words);
+    searchWords();
   });
 }
 
