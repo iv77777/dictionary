@@ -126,6 +126,7 @@ function showWords(wordsElement, index = 0) {
 function renderWords(words) {
   const swiperContainer = document.querySelector('.swiper-container_js');
   words.forEach((element) => {
+    const wordAi = element.wordAi.replace(/\s/g, '').toLowerCase();
     const card = `
     <swiper-slide>
       <div class="card">
@@ -145,9 +146,7 @@ function renderWords(words) {
               ${element.wordAi}
               <span class=""></span>
            </div>
-           <input class="popup__input popup__input_js" type="text" data-src="${
-             element.src
-           }" data-word="${element.wordAi}">
+           <input class="popup__input popup__input_js" type="text" data-src="${element.src}" data-word="${element.wordAi}">
          </div>
          ${element.wordUa}
          </div>
@@ -171,10 +170,7 @@ function renderWords(words) {
             <line x1="15.7071" y1="16" x2="25.6066" y2="25.8995" stroke="#AFD19A" stroke-linecap="round"/>
             </svg>
         </div>
-        <div class="word-writing-counter word-writing-counter_js" id="${element.wordAi
-          .replace(/\s/g, '')
-          .toLowerCase()}">0
-             </div>
+        <div class="word-writing-counter word-writing-counter_js" onclick="deleteValueLocalStorage('${wordAi}')" id="${wordAi}">0</div>
       </div>
     </swiper-slide>
     `;
@@ -264,9 +260,6 @@ function counterWordWriting(input, word) {
     let keyWord = word.replace(/\s/g, '').toLowerCase();
     localStorage.setItem(`${keyWord}`, newCounter);
   }
-
-  // удалить всё.
-  // localStorage.clear();
 }
 
 function renderValueCounter() {
@@ -277,4 +270,31 @@ function renderValueCounter() {
       wordCounter.innerHTML = localStorage.getItem(key);
     }
   }
+}
+
+function deleteValueLocalStorage(wordAi) {
+  tagHtml.classList.add('popup-delete-localStorage_active');
+
+  popupDeleteIocalStorageBtnClose.addEventListener('click', popupDeleteLocalStorageClose);
+
+  popupDeleteLocalStorageBtnRemoveAll.addEventListener('click', removeAllItemsLocalStorage);
+}
+
+function removeAllItemsLocalStorage() {
+  localStorage.clear();
+  popupDeleteLocalStorageBtnRemoveAll.removeEventListener('click', removeAllItemsLocalStorage);
+  popupDeleteLocalStorageClose();
+  removeCounterWordWritingHtmlAll();
+}
+
+function popupDeleteLocalStorageClose() {
+  tagHtml.classList.remove('popup-delete-localStorage_active');
+  popupDeleteIocalStorageBtnClose.removeEventListener('click', popupDeleteLocalStorageClose);
+}
+
+function removeCounterWordWritingHtmlAll() {
+  const counterWordWritingHtmlAll = document.querySelectorAll('.word-writing-counter_js');
+  counterWordWritingHtmlAll.forEach((item) => {
+    item.innerHTML = '0';
+  });
 }

@@ -1,9 +1,3 @@
-const search = document.querySelector('.search');
-const searchBtn = document.querySelector('.search__btn');
-const searchBtnSearch = document.querySelector('.search__btn-search');
-const tagHtml = document.querySelector('html');
-const popupWordsLanguageBtn = document.querySelector('.popup-words_language-btn_js');
-
 if (popupWordsLanguageBtn) {
   popupWordsLanguageBtn.addEventListener('click', () => {
     togglePopupLanguage(tagHtml);
