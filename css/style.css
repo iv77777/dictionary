@@ -264,9 +264,29 @@ body {
 }
 
 .popup-words__content-li {
+  margin-bottom: 5px;
+  background-color: #ededed;
+  cursor: pointer;
   padding: 5px;
   border-radius: 5px;
-  background-color: #ededed;
-  margin-bottom: 5px;
-  cursor: pointer;
+  position: relative;
+}
+.popup-words__content-li small {
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.popup-words_top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.popup-words_language-btn {
+  padding: 5px;
+  background-color: #ffff00ad;
+  border-radius: 5px;
+  margin-bottom: 3px;
+  color: #63ae69;
 }

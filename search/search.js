@@ -2,6 +2,14 @@ const search = document.querySelector('.search');
 const searchBtn = document.querySelector('.search__btn');
 const searchBtnSearch = document.querySelector('.search__btn-search');
 const tagHtml = document.querySelector('html');
+const popupWordsLanguageBtn = document.querySelector('.popup-words_language-btn_js');
+
+if (popupWordsLanguageBtn) {
+  popupWordsLanguageBtn.addEventListener('click', () => {
+    togglePopupLanguage(tagHtml);
+    showAllWordsInPopupWordsContent(words);
+  });
+}
 
 if (searchBtn) {
   searchBtn.addEventListener('click', () => {
@@ -48,10 +56,17 @@ function showAllWordsInPopupWordsContent(words) {
   }
 }
 function renderAllWordsPopup(arrayWirds, renderHtmlElement, key) {
-  arrayWirds.forEach((item, index) => {
-    const itemHtml = `<li class="popup-words__content-li" data-key='${key}' data-index='${index}'>${item.wordAi}</li>`;
-    renderHtmlElement.insertAdjacentHTML('beforeend', itemHtml);
-  });
+  if (tagHtml.classList.contains('wordAi')) {
+    render('wordAi');
+  } else {
+    render('wordUa');
+  }
+  function render(language) {
+    arrayWirds.forEach((item, index) => {
+      const itemHtml = `<li class="popup-words__content-li" data-key='${key}' data-index='${index}'><span class="popup-words__content-text">${item[language]}</span><small>(${key} /${index})</small></li>`;
+      renderHtmlElement.insertAdjacentHTML('beforeend', itemHtml);
+    });
+  }
 }
 
 function counter(itemLength, itemHtml) {
@@ -65,7 +80,7 @@ function searchWords() {
   searchInput.oninput = function () {
     const value = this.value.trim();
     let val = value.toUpperCase();
-    let elasticItems = document.querySelectorAll('.popup-words__content_js li'); //На страеице html находим все елементы "li" в елементи class="popup-words__content_js"
+    let elasticItems = document.querySelectorAll('.popup-words__content_js span');
 
     if (val != '') {
       // если val (значения из поля инрут) НЕ равно пустой строке то
@@ -73,10 +88,10 @@ function searchWords() {
         const textElement = elem.innerText.toUpperCase();
 
         if (textElement.search(val) === -1) {
-          elem.classList.add('hide');
+          elem.closest('.popup-words__content-li').classList.add('hide');
           elem.innerHTML = elem.innerText;
         } else {
-          elem.classList.remove('hide');
+          elem.closest('.popup-words__content-li').classList.remove('hide');
 
           elem.innerHTML = insertMark(elem.innerText, textElement.search(val), val.length);
         }
@@ -93,4 +108,8 @@ function searchWords() {
 
 function insertMark(el, pos, len) {
   return el.slice(0, pos) + '<mark>' + el.slice(pos, pos + len) + '</mark>' + el.slice(pos + len);
+}
+
+function togglePopupLanguage(tagHtml) {
+  tagHtml.classList.toggle('wordAi');
 }
