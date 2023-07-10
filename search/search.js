@@ -72,6 +72,7 @@ function counter(itemLength, itemHtml) {
 function searchWords() {
   const searchInput = document.querySelector('#search__input');
   searchInput.value = '';
+  searchInput.focus();
   searchInput.oninput = function () {
     const value = this.value.trim();
     let val = value.toUpperCase();

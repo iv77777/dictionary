@@ -978,7 +978,7 @@ let words = {
     },
     {
       src: 'words_5/men',
-      wordAi: 'manmen',
+      wordAi: 'men',
       transcription: '',
       wordUa: 'чоловіки',
     },
@@ -1266,7 +1266,6 @@ let words = {
     { src: 'words_8/passport', wordAi: 'passport', transcription: '', wordUa: 'паспорт' },
     { src: 'words_8/purse', wordAi: 'purse', transcription: '', wordUa: 'дамська сумочка' },
     { src: 'words_8/speakers', wordAi: 'speakers', transcription: '', wordUa: 'колонки' },
-    { src: 'words_8/tablet', wordAi: 'tablet', transcription: '', wordUa: 'планшет' },
     {
       src: 'words_8/television(tv)',
       wordAi: 'television (TV)',
@@ -1484,7 +1483,7 @@ let words = {
       wordUa: 'журнальний столик',
     },
     { src: 'words_11/cupboard', wordAi: 'cupboard', transcription: '', wordUa: 'навісна шафа' },
-    { src: 'words_11/fridge', wordAi: 'fridge', transcription: '', wordUa: 'холодильник' },
+    { src: 'words_11/fridge', wordAi: 'fridge', transcription: '|frɪdʒ|', wordUa: 'холодильник' },
     { src: 'words_11/lamp', wordAi: 'lamp', transcription: '', wordUa: 'лампа' },
     {
       src: 'words_11/microwave',
@@ -1605,7 +1604,7 @@ let words = {
     {
       src: 'words_13/athletic',
       wordAi: 'athletic',
-      transcription: '',
+      transcription: '|æθˈletɪk|',
       wordUa: 'спортивний, атлетичний',
     },
     {
@@ -1654,7 +1653,7 @@ let words = {
     { src: 'words_15/beach', wordAi: 'beach', transcription: '', wordUa: 'пляж' },
     { src: 'words_15/prison', wordAi: 'prison', transcription: '', wordUa: "в'язниця" },
     { src: 'words_15/tour', wordAi: 'tour', transcription: '', wordUa: 'тур, екскурсія' },
-    { src: 'words_15/weather', wordAi: 'weather', transcription: '', wordUa: 'погода' },
+    { src: 'words_15/weather', wordAi: 'weather', transcription: 'ˈweðə', wordUa: 'погода' },
     {
       src: 'words_15/fantastic',
       wordAi: 'fantastic',
