@@ -1,4 +1,5 @@
 /* запритит выдиления текста для разных браузерв */
+
 .unselectable {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -9,12 +10,13 @@
 }
 body {
   font-family: Georgia, Times, serif;
-  background-color: #afd19a;
+  background-color: var(--main-bg-color);
   padding: 65px 5px 5px 5px;
   padding-bottom: 15px;
   font-size: 20px;
   display: flex;
   text-align: center;
+  color: var(--main-color);
 }
 
 .hide {
@@ -46,14 +48,14 @@ body {
 .open-popup-menu .icon-menu_line-1 {
   top: 50%;
   transform: translateY(-50%) rotate(-45deg);
-  background-color: yellow;
+  background-color: var(--main-icon-color);
 }
 .icon-menu_line-2 {
   top: 50%;
 }
 .open-popup-menu .icon-menu_line-2 {
   transform: scale(0);
-  background-color: yellow;
+  background-color: var(--main-icon-color);
 }
 .icon-menu_line-3 {
   top: 100%;
@@ -61,7 +63,7 @@ body {
 .open-popup-menu .icon-menu_line-3 {
   top: 50%;
   transform: translateY(-50%) rotate(45deg);
-  background-color: yellow;
+  background-color: var(--main-icon-color);
 }
 .card {
   position: relative;
@@ -191,7 +193,7 @@ body {
   border: #63ae6942 1px solid;
 }
 .popup__input:focus {
-  border: #63ae69 1px solid;
+  border: var(--main-bg-color) 1px solid;
 }
 .popup__input.wordFalse {
   background-color: red;
@@ -256,8 +258,8 @@ body {
   display: block;
   border: solid 1px #d8ddd8;
 }
-.popup-menu__title._active {
-  color: #63ae69;
+input:checked + span {
+  color: var(--main-color-active);
 }
 .popup__input {
   width: 100%;
@@ -286,10 +288,9 @@ body {
 
 .popup-words_language-btn {
   padding: 5px;
-  background-color: #eaeb37;
+  background-color: var(--main-icon-color);
   border-radius: 5px;
   margin-bottom: 3px;
-  color: #63ae69;
   cursor: pointer;
 }
 

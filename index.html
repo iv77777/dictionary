@@ -10,16 +10,24 @@
   <link rel="shortcut icon" href="favicon.png" type="image/png">
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/swiper/swiper-bundle.css">
-  <link rel="stylesheet" href="./search/search.css?_v=1023112303094">
-  <link rel="stylesheet" href="./css/swiper/myStyle.css?_v=1023112303094">
-  <link rel="stylesheet" href="./css/style.css?_v=1023112303094">
+  <link rel="stylesheet" href="./search/search.css?_v=1023112303095">
+  <link rel="stylesheet" href="./css/swiper/myStyle.css?_v=1023112303095">
+  <link rel="stylesheet" href="./css/style.css?_v=1023112303095">
+  <style>
+    :root {
+      --main-bg-color: #afd19a;
+      --main-icon-color: #f1dc8a;
+      --main-color: #000;
+      --main-color-active: var(--main-icon-color);
+    }
+  </style>
 </head>
 
 <body class="unselectable">
 
   <div class="search">
     <button class="search__btn">
-      <svg viewBox="0 0 24 24" width="24px" height="24px" fill="yellow">
+      <svg viewBox="0 0 24 24" width="24px" height="24px" fill="var(--main-icon-color)">
         <path fill-rule="evenodd" clip-rule="evenodd"
           d="M13.753 13.753a1.25 1.25 0 0 1 1.768 0l6 6a1.25 1.25 0 1 1-1.768 1.768l-6-6a1.25 1.25 0 0 1 0-1.768Z">
         </path>
@@ -62,7 +70,8 @@
   </div>
 
   <div class="popup-menu">
-    <div class="popup-menu__content popup-menu__content_js"></div>
+    <div class="popup-menu__content popup-menu__content_js">
+    </div>
   </div>
   <div class="popup-words">
     <div class="popup-words_top">
@@ -81,12 +90,12 @@
   </div>
 
 
-  <script src="./js/words.js?_v=1023112303094"></script>
-  <script src="./js/elementsHtml.js?_v=1023112303094"></script>
+  <script src="./js/words.js?_v=1023112303095"></script>
+  <script src="./js/elementsHtml.js?_v=1023112303095"></script>
   <script src="./js/swiper/swiper-bundle.min.js"></script>
-  <script src="./js/swiper/swiperInit.js?_v=1023112303094"></script>
-  <script src="./js/script.js?_v=1023112303094"></script>
-  <script src="./search/search.js?_v=1023112303094"></script>
+  <script src="./js/swiper/swiperInit.js?_v=1023112303095"></script>
+  <script src="./js/script.js?_v=1023112303095"></script>
+  <script src="./search/search.js?_v=1023112303095"></script>
 </body>
 
 </html>

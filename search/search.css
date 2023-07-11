@@ -1,3 +1,4 @@
+/* var(--main-icon-color); */
 .search {
   display: flex;
   align-items: center;
@@ -32,7 +33,7 @@
   color: #ccc;
 }
 .search.search--active .search__input {
-  border: solid 2px yellow;
+  border: solid 2px var(--main-icon-color);
   transition: width 0.2s, padding 0.2s;
   padding: 5px 15px;
   width: 250px;
@@ -45,7 +46,7 @@
   top: 0;
   right: 0;
   z-index: 2;
-  background-color: yellow;
+  background-color: var(--main-icon-color);
   border-radius: 50%;
 }
 

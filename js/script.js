@@ -41,10 +41,9 @@ function renderPopupMenu(words, wordsLength) {
   const popupMenuContent = document.querySelector('.popup-menu__content_js');
   const popupMenuWordsTitle = `
   
-    <label class="popup-menu__title _active" >
-      <input  type="checkbox" name="words" value="${words}"> ${words} <small>(${wordsLength})</small>
+    <label class="popup-menu__title" >
+      <input  type="checkbox" name="words" value="${words}"><span> ${words} <small>(${wordsLength})</small></span>
     </label>
-  </form>
   `;
   popupMenuContent.insertAdjacentHTML('beforeend', popupMenuWordsTitle);
 }

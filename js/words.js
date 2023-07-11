@@ -1264,8 +1264,6 @@ let words = {
     { src: 'words_8/lipstick', wordAi: 'lipstick', transcription: '', wordUa: 'помада для губ' },
     { src: 'words_8/money', wordAi: 'money', transcription: '', wordUa: 'гроші' },
     { src: 'words_8/passport', wordAi: 'passport', transcription: '', wordUa: 'паспорт' },
-    { src: 'words_8/purse', wordAi: 'purse', transcription: '', wordUa: 'дамська сумочка' },
-    { src: 'words_8/speakers', wordAi: 'speakers', transcription: '', wordUa: 'колонки' },
     {
       src: 'words_8/television(tv)',
       wordAi: 'television (TV)',
