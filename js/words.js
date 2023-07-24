@@ -1276,7 +1276,7 @@ let words = {
     { src: 'words_8/watch', wordAi: 'watch', transcription: '', wordUa: 'наручний годинник' },
     { src: 'words_8/window', wordAi: 'window', transcription: '', wordUa: 'вікно' },
     { src: 'words_8/scooter', wordAi: 'scooter', transcription: '', wordUa: 'самокат, мопед' },
-    { src: 'words_8/drone', wordAi: 'drone', transcription: '', wordUa: 'дрон' },
+    { src: 'words_8/drone', wordAi: 'drone', transcription: '|drəʊn|', wordUa: 'дрон' },
     { src: 'words_8/bottle', wordAi: 'bottle', transcription: '', wordUa: 'бутилка' },
     { src: 'words_8/country', wordAi: 'country', transcription: '', wordUa: 'країна' },
     {
@@ -1464,7 +1464,7 @@ let words = {
     { src: 'words_10/monday', wordAi: 'Monday', transcription: '', wordUa: 'понеділок' },
     { src: 'words_10/tuesday', wordAi: 'Tuesday', transcription: '', wordUa: 'вівторок' },
     { src: 'words_10/wednesday', wordAi: 'Wednesday', transcription: '', wordUa: 'середа' },
-    { src: 'words_10/thursday', wordAi: 'Thursday', transcription: '', wordUa: 'четвер' },
+    { src: 'words_10/thursday', wordAi: 'Thursday', transcription: '|ˈθɜːzdeɪ|', wordUa: 'четвер' },
     { src: 'words_10/friday', wordAi: 'Friday', transcription: '', wordUa: "п'ятниця" },
     { src: 'words_10/saturday', wordAi: 'Saturday', transcription: '', wordUa: 'субота' },
     { src: 'words_10/sunday', wordAi: 'Sunday', transcription: '', wordUa: 'неділя' },
