@@ -138,10 +138,11 @@ function renderWords(words) {
             ${element.transcription}
            </div>
            <div class="popup popup_js">
-           <div>
-            <span>${element.wordUa}</span>
+           <div class="popup__text popup__text-ua popup__text-ua_js">
+              ${element.wordUa}
+            <span></span>
            </div>
-           <div class="popup__text popup__text_js">
+           <div class="popup__text popup__text-gb popup__text-gb_js">
               ${element.wordAi}
               <span class=""></span>
            </div>
@@ -241,10 +242,16 @@ function popupClose() {
 
 // Показує скриває текст підсказку
 function showsHiddenText() {
-  const popupTexts = document.querySelectorAll('.popup__text_js');
-  popupTexts.forEach((element) => {
+  const popupTextsGb = document.querySelectorAll('.popup__text-gb_js');
+  popupTextsGb.forEach((element) => {
     element.addEventListener('click', () => {
-      document.querySelector('html').classList.toggle('showText');
+      document.querySelector('html').classList.toggle('showText-gb');
+    });
+  });
+  const popupTextsUa = document.querySelectorAll('.popup__text-ua_js');
+  popupTextsUa.forEach((element) => {
+    element.addEventListener('click', () => {
+      document.querySelector('html').classList.toggle('showText-ua');
     });
   });
 }
