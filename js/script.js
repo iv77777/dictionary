@@ -76,21 +76,46 @@ function getCheckedCheckBoxes() {
   return checkedValues; // для использования в нужном месте
 }
 
+function showListOrCards() {
+  const html = document.querySelector('html');
+  const iconlistCards = document.querySelector('.icon_list-cards_js');
+
+  if (html.classList.contains('showList')) {
+    iconlistCards.innerText = 'cards';
+    html.classList.remove('showList');
+  } else {
+    iconlistCards.innerText = 'list';
+    html.classList.add('showList');
+  }
+  showWordsPopupSelect();
+}
+
 function showWordsPopupSelect() {
   const html = document.querySelector('html');
+  console.log('showWordsPopupSelect()');
 
-  if (html.classList.contains('open-popup-menu')) {
-    const swiperContainer = document.querySelector('.swiper-container_js');
-    swiperContainer.innerHTML = '';
+  const swiperContainer = document.querySelector('.swiper-container_js');
+  const contentList = document.querySelector('.content-list_js');
+  swiperContainer.innerHTML = '';
+  contentList.innerHTML = '';
 
-    // Получаєм всі вибрани Чекбокси в меню
-    const inputsChecked = getCheckedCheckBoxes();
-    if (inputsChecked.length > 0) {
-      inputsChecked.forEach((element) => {
+  // if (html.classList.contains('open-popup-menu')) {
+  // Получаєм всі вибрани Чекбокси в меню
+  const inputsChecked = getCheckedCheckBoxes();
+  if (inputsChecked.length > 0) {
+    inputsChecked.forEach((element) => {
+      if (html.classList.contains('showList')) {
+        contentList.classList.remove('hidden');
+        swiperContainer.classList.add('hidden');
+        showList(words[element], contentList);
+      } else {
+        swiperContainer.classList.remove('hidden');
+        contentList.classList.add('hidden');
         showWords(words[element]);
-      });
-    }
+      }
+    });
   }
+  // }
 }
 
 function showWords(wordsElement, index = 0) {
@@ -120,8 +145,36 @@ function showWords(wordsElement, index = 0) {
   });
 }
 // =============================================================
+// Рендерить слова з переданого масиву на сторінку HTML в list
+function showList(words, contentList) {
+  words.forEach((element) => {
+    const item = `
+        <li class="content-list_item">
+          <img class="content-list_img" src="./img/card/${element.src}.jpg" alt="${element.wordAi}">
+          <div class="content-list_content">
+            <div class="content-list_wordAi">${element.wordAi}</div>
+            <div class="content-list_transcription">${element.transcription}</div>
+            <div class="content-list_wordUa">${element.wordUa}</div>
+          </div>
+          <div class="content-list_icon" onclick="soundClick('${element.src}')">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="50"
+              height="50" viewBox="0 0 20 20">
+              <circle r="10" cx="10" cy="10" fill="#3b6280"></circle>
+              <symbol id="din">
+                <path fill="#fff"
+                  d="M1,4C0.447,4,0,4.447,0,5v4c0,0.553,0.447,1,1,1h1l4,4V0L2,4H1z M10.346,7c0-1.699-1.042-3.154-2.546-3.867L6.982,4.68   C7.885,5.107,8.51,5.98,8.51,7S7.885,8.893,6.982,9.32L7.8,10.867C9.304,10.154,10.346,8.699,10.346,7z M9.447,0.017L8.618,1.586   C10.723,2.584,12.182,4.621,12.182,7s-1.459,4.416-3.563,5.414l0.829,1.569c2.707-1.283,4.57-3.925,4.57-6.983   S12.154,1.3,9.447,0.017z">
+                </path>
+              </symbol>
+              <use xlink:href="#din" x="3" y="3"></use>
+            </svg>
+          </div>
+        </li>
+    `;
+    contentList.insertAdjacentHTML('beforeend', item);
+  });
+}
 
-// Рендерить слова з переданого масиву на сторінку HTML
+// Рендерить слова з переданого масиву на сторінку HTML в слайдері
 function renderWords(words) {
   const swiperContainer = document.querySelector('.swiper-container_js');
   words.forEach((element) => {
@@ -182,7 +235,7 @@ function renderWords(words) {
 function soundClick(word) {
   const audio = new Audio(); // Создаём новый элемент Audio
   audio.src = 'mp3/' + word.replace(/\s/g, '').toLowerCase() + '.mp3'; // Указываем путь к звуку "клика"
-  // audio.autoplay = true; // Автоматически запускаем
+
   audio.play();
 }
 

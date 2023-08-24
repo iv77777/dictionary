@@ -6,7 +6,7 @@
   position: fixed;
   top: 17px;
   right: 15px;
-  z-index: 2;
+  z-index: 5;
 }
 .open-popup-words .search {
   z-index: 3;
@@ -16,6 +16,9 @@
   position: absolute;
   right: 4px;
   top: 2px;
+}
+.showList .search__btn {
+  display: none;
 }
 .search__btn svg {
   transform: translate(3px, 2px);

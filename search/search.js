@@ -79,6 +79,7 @@ function searchWords() {
     let elasticItems = document.querySelectorAll('.popup-words__content_js span');
 
     if (val != '') {
+      console.log(val, '= true');
       // если val (значения из поля инрут) НЕ равно пустой строке то
       elasticItems.forEach((elem) => {
         const textElement = elem.innerText.toUpperCase();
@@ -93,10 +94,11 @@ function searchWords() {
         }
       });
     } else {
+      console.log(val, '= false');
       // если val (значения из поля инрут) равно пустой строке то
       elasticItems.forEach((elem) => {
         elem.classList.remove('hide');
-        elem.innerHTML = elem.innerText; //убераем теги з "elem" (которые подсвечували значения из поля инрут в масиве)
+        elem.innerHTML = elem.innerText; //убераем теги з "elem" (которые подсвечували значения из поля інрут в масиве)
       });
     }
   };

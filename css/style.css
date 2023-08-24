@@ -229,7 +229,7 @@ body {
   content: '';
   width: 100%;
   height: 60px;
-  display: none;
+  /* display: none; */
   background-color: #afd19a;
   position: fixed;
   top: 0;
@@ -352,4 +352,60 @@ input:checked + span {
 }
 .popup-delete-localStorage_btn:active {
   background-color: #ff000052;
+}
+
+/* ----------- */
+.content-list {
+}
+.content-list_item {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  margin-bottom: 10px;
+  text-align: start;
+}
+.content-list_img {
+  width: 20%;
+}
+
+.content-list_content {
+  width: 80%;
+  padding: 10px 10px 10px 15px;
+}
+.content-list_wordAi {
+  margin-bottom: 10px;
+}
+.content-list_transcription {
+  margin-bottom: 10px;
+  color: #cfcccc;
+}
+.content-list_wordUa {
+}
+.content-list_icon {
+  padding: 5px;
+  cursor: pointer;
+}
+.content-list_icon:active {
+  transform: scale(0.9);
+}
+
+.hidden {
+  display: none;
+}
+.icon_list-cards {
+  position: fixed;
+  top: 22px;
+  left: 50%;
+  padding: 5px 15px;
+  background-color: var(--main-icon-color);
+  border-radius: 5px;
+  transform: translateX(-50%);
+  min-width: 78px;
+  z-index: 6;
+}
+.open-popup-menu .icon_list-cards {
+  z-index: 0;
+}
+.icon_list-cards:active {
+  transform: translateX(-50%) scale(0.9);
 }
