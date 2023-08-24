@@ -81,10 +81,10 @@ function showListOrCards() {
   const iconlistCards = document.querySelector('.icon_list-cards_js');
 
   if (html.classList.contains('showList')) {
-    iconlistCards.innerText = 'cards';
+    iconlistCards.innerText = 'list';
     html.classList.remove('showList');
   } else {
-    iconlistCards.innerText = 'list';
+    iconlistCards.innerText = 'cards';
     html.classList.add('showList');
   }
   showWordsPopupSelect();

@@ -8,8 +8,8 @@
   right: 15px;
   z-index: 5;
 }
-.open-popup-words .search {
-  z-index: 3;
+.open-popup-menu .search__btn {
+  display: none;
 }
 .search__btn {
   padding: 5px;

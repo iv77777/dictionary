@@ -74,33 +74,39 @@ function searchWords() {
   searchInput.value = '';
   searchInput.focus();
   searchInput.oninput = function () {
+    const html = document.querySelector('html');
     const value = this.value.trim();
     let val = value.toUpperCase();
     let elasticItems = document.querySelectorAll('.popup-words__content_js span');
+    html.classList.add('add-loading');
 
-    if (val != '') {
-      console.log(val, '= true');
-      // если val (значения из поля инрут) НЕ равно пустой строке то
-      elasticItems.forEach((elem) => {
-        const textElement = elem.innerText.toUpperCase();
+    setTimeout(() => {
+      if (val != '') {
+        // если val (значения из поля инрут) НЕ равно пустой строке то
+        elasticItems.forEach((elem) => {
+          const textElement = elem.innerText.toUpperCase();
 
-        if (textElement.search(val) === -1) {
-          elem.closest('.popup-words__content-li').classList.add('hide');
-          elem.innerHTML = elem.innerText;
-        } else {
+          if (textElement.search(val) === -1) {
+            elem.closest('.popup-words__content-li').classList.add('hide');
+            elem.innerHTML = elem.innerText;
+          } else {
+            elem.closest('.popup-words__content-li').classList.remove('hide');
+
+            elem.innerHTML = insertMark(elem.innerText, textElement.search(val), val.length);
+          }
+        });
+      } else {
+        // если val (значения из поля инрут) равно пустой строке то
+        elasticItems.forEach((elem) => {
           elem.closest('.popup-words__content-li').classList.remove('hide');
-
-          elem.innerHTML = insertMark(elem.innerText, textElement.search(val), val.length);
-        }
-      });
-    } else {
-      console.log(val, '= false');
-      // если val (значения из поля инрут) равно пустой строке то
-      elasticItems.forEach((elem) => {
-        elem.classList.remove('hide');
-        elem.innerHTML = elem.innerText; //убераем теги з "elem" (которые подсвечували значения из поля інрут в масиве)
-      });
-    }
+          elem.classList.remove('hide');
+          elem.innerHTML = elem.innerText; //убераем теги з "elem" (которые подсвечували значения из поля інрут в масиве)
+        });
+      }
+    }, 10);
+    setTimeout(() => {
+      html.classList.remove('add-loading');
+    }, 20);
   };
 }
 
