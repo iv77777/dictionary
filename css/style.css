@@ -453,6 +453,7 @@ input:checked + span {
   padding: 10px;
   color: #fff;
   cursor: pointer;
+  background-color: #000;
   border: 1px solid #fff;
 }
 .qr-code_button-closed:active {
