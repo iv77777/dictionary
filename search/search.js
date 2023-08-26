@@ -41,8 +41,6 @@ function hidePopupWords(search, tagHtml) {
 }
 // ---------------------------------------------
 function onClickWordInPopupWords(words) {
-  const swiperContainer = document.querySelector('.swiper-container_js');
-  swiperContainer.innerHTML = '';
   const popupWordsContent = document.querySelector('.popup-words__content_js');
   popupWordsContent.addEventListener('click', showІelectedWordInPopupWords);
 }
@@ -50,6 +48,8 @@ function showІelectedWordInPopupWords(e) {
   const key = e.target.closest('.popup-words__content-li').dataset.key;
   const index = e.target.closest('.popup-words__content-li').dataset.index;
   hidePopupWords(search, tagHtml);
+  const swiperContainer = document.querySelector('.swiper-container_js');
+  swiperContainer.innerHTML = '';
   showWords(words[key], index);
 }
 function showAllWordsInPopupWordsContent(words) {
