@@ -9,3 +9,7 @@ const popupDeleteIocalStorageBtnClose = document.querySelector(
 const popupDeleteLocalStorageBtnRemoveAll = document.querySelector(
   '.popup-delete-localStorage_btn-remove-all_js',
 );
+//
+const buttonQrCodeShow = document.querySelector('.button_qr-code-show_js');
+const qrCodeButtonClosed = document.querySelector('.qr-code_button-closed_js');
+//

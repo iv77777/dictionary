@@ -58,7 +58,9 @@ function renderAllWordsPopup(arrayWirds, renderHtmlElement, key) {
   }
   function render(language) {
     arrayWirds.forEach((item, index) => {
-      const itemHtml = `<li class="popup-words__content-li" data-key='${key}' data-index='${index}'><span class="popup-words__content-text">${item[language]}</span><small>(${key} /${index})</small></li>`;
+      const itemHtml = `<li class="popup-words__content-li" data-key='${key}' data-index='${index}'><span class="popup-words__content-text">${
+        item[language]
+      }</span><small>(${key} /${index + 1})</small></li>`;
       renderHtmlElement.insertAdjacentHTML('beforeend', itemHtml);
     });
   }

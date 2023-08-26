@@ -36,6 +36,15 @@ if (isMobile.any()) {
   // тегу body добавляем касс '_pc'
   document.body.classList.add('_pc');
 }
+
+// показує QR-code
+buttonQrCodeShow.addEventListener('click', () => {
+  tagHtml.classList.add('qr-code_show');
+});
+// ховає QR-code
+qrCodeButtonClosed.addEventListener('click', () => {
+  tagHtml.classList.remove('qr-code_show');
+});
 // Рендерить меню
 function renderPopupMenu(words, wordsLength) {
   const popupMenuContent = document.querySelector('.popup-menu__content_js');
@@ -92,14 +101,12 @@ function showListOrCards() {
 
 function showWordsPopupSelect() {
   const html = document.querySelector('html');
-  console.log('showWordsPopupSelect()');
 
   const swiperContainer = document.querySelector('.swiper-container_js');
   const contentList = document.querySelector('.content-list_js');
   swiperContainer.innerHTML = '';
   contentList.innerHTML = '';
 
-  // if (html.classList.contains('open-popup-menu')) {
   // Получаєм всі вибрани Чекбокси в меню
   const inputsChecked = getCheckedCheckBoxes();
   if (inputsChecked.length > 0) {
@@ -115,7 +122,6 @@ function showWordsPopupSelect() {
       }
     });
   }
-  // }
 }
 
 function showWords(wordsElement, index = 0) {

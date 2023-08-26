@@ -14,8 +14,6 @@ body {
   padding: 65px 5px 5px 5px;
   padding-bottom: 15px;
   font-size: 20px;
-  display: flex;
-  text-align: center;
   color: var(--main-color);
 }
 
@@ -100,6 +98,8 @@ body {
 }
 .svg-blok {
   margin-top: 30px;
+  display: flex;
+  justify-content: center;
 }
 
 .svg-blok svg {
@@ -130,9 +130,11 @@ body {
 
   width: 100%;
   transition: left 0.3s;
+  text-align: center;
 }
 .word {
   position: relative;
+  text-align: center;
 }
 .word-writing-counter {
   color: #fff;
@@ -154,7 +156,7 @@ body {
   display: none;
   position: absolute;
   bottom: 5px;
-  right: 0px;
+  right: -5px;
   width: 50px;
   cursor: pointer;
   z-index: 2;
@@ -428,3 +430,43 @@ input:checked + span {
   align-items: center;
   justify-content: center;
 }
+/* --------------- */
+.qr-code {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  align-items: center;
+  justify-content: center;
+  background-color: #00000075;
+}
+.qr-code_show .qr-code {
+  display: flex;
+}
+.qr-code_button-closed {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid #fff;
+}
+.qr-code_button-closed:active {
+  transform: scale(0.9);
+}
+.button_qr-code-show {
+  display: none;
+  position: fixed;
+  top: 5px;
+  right: 15px;
+  max-width: 50px;
+  z-index: 10;
+}
+.open-popup-menu .button_qr-code-show {
+  display: block;
+}
+/* ------------------- */
