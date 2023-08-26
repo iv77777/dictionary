@@ -13,3 +13,4 @@ const popupDeleteLocalStorageBtnRemoveAll = document.querySelector(
 const buttonQrCodeShow = document.querySelector('.button_qr-code-show_js');
 const qrCodeButtonClosed = document.querySelector('.qr-code_button-closed_js');
 //
+const searchInput = document.querySelector('.search__input_js');

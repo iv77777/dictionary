@@ -5,8 +5,10 @@ if (popupWordsLanguageBtn) {
     setTimeout(() => {
       if (tagHtml.classList.contains('wordAi')) {
         popupWordsLanguageBtn.innerHTML = 'En';
+        searchInput.placeholder = 'Enter the word';
       } else {
         console.log('Ua');
+        searchInput.placeholder = 'Введіть слово';
         popupWordsLanguageBtn.innerHTML = 'Ua';
       }
       showAllWordsInPopupWordsContent(words);
