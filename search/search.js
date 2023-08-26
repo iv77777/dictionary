@@ -1,8 +1,20 @@
 if (popupWordsLanguageBtn) {
   popupWordsLanguageBtn.addEventListener('click', () => {
     togglePopupLanguage(tagHtml);
-    showAllWordsInPopupWordsContent(words);
-    searchWords();
+    tagHtml.classList.add('add-loading');
+    setTimeout(() => {
+      if (tagHtml.classList.contains('wordAi')) {
+        popupWordsLanguageBtn.innerHTML = 'En';
+      } else {
+        console.log('Ua');
+        popupWordsLanguageBtn.innerHTML = 'Ua';
+      }
+      showAllWordsInPopupWordsContent(words);
+      searchWords();
+    }, 10);
+    setTimeout(() => {
+      tagHtml.classList.remove('add-loading');
+    }, 20);
   });
 }
 
