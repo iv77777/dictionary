@@ -107,6 +107,9 @@ function searchWords() {
           if (val.search('’') !== -1) {
             val = val.replace('’', "'");
           }
+          if (val.search('‘') !== -1) {
+            val = val.replace('‘', "'");
+          }
 
           if (textElement.search(val) === -1) {
             elem.closest('.popup-words__content-li').classList.add('hide');
