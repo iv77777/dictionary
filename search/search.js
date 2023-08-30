@@ -45,12 +45,14 @@ function onClickWordInPopupWords(words) {
   popupWordsContent.addEventListener('click', showІelectedWordInPopupWords);
 }
 function showІelectedWordInPopupWords(e) {
-  const key = e.target.closest('.popup-words__content-li').dataset.key;
-  const index = e.target.closest('.popup-words__content-li').dataset.index;
-  hidePopupWords(search, tagHtml);
-  const swiperContainer = document.querySelector('.swiper-container_js');
-  swiperContainer.innerHTML = '';
-  showWords(words[key], index);
+  if (e.target.closest('.popup-words__content-li')) {
+    const key = e.target.closest('.popup-words__content-li').dataset.key;
+    const index = e.target.closest('.popup-words__content-li').dataset.index;
+    hidePopupWords(search, tagHtml);
+    const swiperContainer = document.querySelector('.swiper-container_js');
+    swiperContainer.innerHTML = '';
+    showWords(words[key], index);
+  }
 }
 function showAllWordsInPopupWordsContent(words) {
   let renderHtmlElement = document.querySelector('.popup-words__content_js');
@@ -101,6 +103,10 @@ function searchWords() {
         // если val (значения из поля инрут) НЕ равно пустой строке то
         elasticItems.forEach((elem) => {
           const textElement = elem.innerText.toUpperCase();
+
+          if (val.search('’') !== -1) {
+            val = val.replace('’', "'");
+          }
 
           if (textElement.search(val) === -1) {
             elem.closest('.popup-words__content-li').classList.add('hide');
