@@ -547,7 +547,6 @@ let words = {
       transcription: '',
       wordUa: '18:00',
     },
-    // ===========
     {
       src: 'time/sevenfifteen',
       wordAi: 'seven fifteen.fifteen minutes past seven',
