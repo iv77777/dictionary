@@ -266,6 +266,12 @@ function onInput() {
     const wordMp3Src = input.dataset.src;
     input.oninput = function () {
       if (word.replace(/\s/g, '').length === input.value.replace(/\s/g, '').length) {
+        if (input.value.search('’') !== -1) {
+          input.value = input.value.replace('’', "'");
+        }
+        if (input.value.search('‘') !== -1) {
+          input.value = input.value.replace('‘', "'");
+        }
         if (
           word.replace(/\s/g, '').toLowerCase() === input.value.replace(/\s/g, '').toLowerCase()
         ) {
