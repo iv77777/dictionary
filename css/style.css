@@ -15,6 +15,7 @@ body {
   padding-bottom: 15px;
   font-size: 20px;
   color: var(--main-color);
+  font-family: 'Open Sans', sans-serif;
 }
 
 .hide {
