@@ -192,7 +192,7 @@ function renderWords(words) {
           <img  src="./img/card/${element.src}.jpg" alt="${element.wordAi}" >
         </div>
         <div class="word">
-         ${element.wordAi}
+          <div class="word_text-ua">${element.wordAi}</div>
           <div class="transcription">
             ${element.transcription}
            </div>

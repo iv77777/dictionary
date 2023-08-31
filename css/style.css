@@ -171,9 +171,7 @@ body {
   position: relative;
   cursor: pointer;
 }
-.popup__text-ua {
-  margin-bottom: 10px;
-}
+
 .showText-ua .popup__text-ua {
   color: #000;
 }
@@ -472,3 +470,6 @@ input:checked + span {
   display: block;
 }
 /* ------------------- */
+.word_text-ua {
+  max-width: 245px;
+}
